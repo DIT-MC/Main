@@ -23,5 +23,3 @@ redis: # Queue
 
 db: # Database
   image: postgres:9.4
-  volumes:
-    - "myvolume:/var/lib/postgresql/data"
