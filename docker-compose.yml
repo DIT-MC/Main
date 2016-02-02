@@ -1,18 +1,18 @@
 voting: # Frontend
-  image: ditmc/voting
+  image: ditmc/voting:step1
   links:
     - redis
   ports:
     - "5000:80"
 
 worker: # Vote processor
-  image: ditmc/worker
+  image: ditmc/worker:step1
   links:
     - redis
     - db
 
 result: # Results
-  image: ditmc/result
+  image: ditmc/result:step1
   links:
     - db
   ports:
